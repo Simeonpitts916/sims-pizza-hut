@@ -1,7 +1,7 @@
 
 // bussiness logic //
 class Pizza {
-    constructor(size, toping){
+    constructor(size, topping){
         this.size= size;
         this.topping= topping;
         this.price=0;
@@ -28,27 +28,23 @@ class Pizza {
             return false;
         }
     }
+
+    getTotalPrice() {
+        return this.price;
+    }
     
 }
 
-const myPizza = new Pizza('medium', ['cheese', 'pepperoni']);
+const myPizza = new Pizza("medium", "mushroom");
 myPizza.addSize();
+myPizza.addToppings();
 
-console.log(myPizza.price)
+console.log("Total Price:", myPizza.getTotalPrice());
 
 
 
 
 // UI logic //
 
-// window.addEventListener("load", function(){
-//     this.document.querySelector("from#order-list").addEventListener("submit")
-// });
 
-// function OnSubmit(event){
-//     event.preventDefault();
-//     const orderListing = document.getElementById("OrderList");
-//     orderListing.innerHTML="";
-//     const Topping = document.querySelector("input[name='toping']:checked").value;
-//     const Size = document.querySelector("input[name='size']:checked").value;
     
