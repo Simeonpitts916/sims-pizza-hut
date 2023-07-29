@@ -35,7 +35,9 @@ function OnSubmit(event){
     event.preventDefault();
     const orderListing = document.getElementById("OrderList");
     orderListing.innerHTML="";
-    const topping = document.querySelector("input[name='toping']:checked").value;
+    const Topping = document.querySelector("input[name='toping']:checked").value;
+    const Size = document.querySelector("input[name='size']:checked").value;
+    
     
 
     
