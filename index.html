@@ -11,19 +11,22 @@
     <div class="container">
         <h1>sims pizza place</h1>
         <form id="order-list">
-        <label name="toping">pick your toping <br>
-            <input type="radio" name="toping">pepperoni<br>
-            <input type="radio" name="toping">pinapple<br>
-            <input type="radio" name="toping">mushroom<br><br
-        </label>
-        <label name="size">pick your size of pizza <br>
-            <input type="radio" name="size" value="small">small <br>
-            <input type="radio" name="size" value="medeum">medium <br>
-            <input type="radio" name="size" value="large">large <br>
-        </label>
-        </form><br><br>
-        <div id="OrderListing"></div>
-        <button type="submit">Calculate Price</button>
+            <label for="topping">Pick your topping: <br>
+                <input type="radio" name="topping" id="pepperoni" value="pepperoni"> Pepperoni<br>
+                <input type="radio" name="topping" id="pineapple" value="pineapple"> Pineapple<br>
+                <input type="radio" name="topping" id="mushroom" value="mushroom"> Mushroom<br>
+            </label>
+            <br>
+            <label for="size">Pick your size of pizza: <br>
+                <input type="radio" name="size" id="small" value="small"> Small <br>
+                <input type="radio" name="size" id="medium" value="medium"> Medium <br>
+                <input type="radio" name="size" id="large" value="large"> Large <br>
+            </label>
+            <br><br>
+            <div id="OrderListing"></div>
+            <button type="button">Calculate Price</button>
+        </form>
+        
     </div>
 </body>
 </html>

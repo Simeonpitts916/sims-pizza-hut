@@ -35,16 +35,32 @@ class Pizza {
     
 }
 
-const myPizza = new Pizza("medium", "mushroom");
-myPizza.addSize();
-myPizza.addToppings();
+// const myPizza = new Pizza("medium", "mushroom");
+// myPizza.addSize();
+// myPizza.addToppings();
 
-console.log("Total Price:", myPizza.getTotalPrice());
+// console.log("Total Price:", myPizza.getTotalPrice());
 
 
 
 
 // UI logic //
+
+    window.onload = function() {
+        const form = document.querySelector("form");
+        form.onsubmit = function(event) {
+            event.preventDefault();
+            let sizeInputValue = document.querySelector('input[name="size"]:checked').value;
+            let toppingsInputValue = document.querySelector('input[name="topping"]:checked').value;
+
+            const myPizza = new Pizza(sizeInputValue, toppingsInputValue);
+            myPizza.addSize();
+            myPizza.addToppings();
+            let price = myPizza.getTotalPrice();
+
+            document.getElementById("OrderListing").innerHTML
+        };
+    };
 
 
     
