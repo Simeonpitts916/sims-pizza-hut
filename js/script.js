@@ -1,11 +1,15 @@
 
 // bussiness logic //
-function Pizza(size, topping,) {
-    this.size = size;
-    this.topping = topping;
+class Pizza {
+    cunstructor(size, toping){
+        this.size= size;
+        this.topping= topping;
+    }
 }
 
-this.topping.forEach(function(element) {
+const pizza1 = new Pizza("");
+
+pizza1.topping.forEach(function(element) {
     switch (element){
         case ("mushrooms"):
         case ("pinapple"):
@@ -14,15 +18,18 @@ this.topping.forEach(function(element) {
     } 
 });
 
-Pizza.prototype.totalcost = function() {
-    let total = 0.00;
-    if (this.size === "small"){
-        return $2 
-    } else if (this.size === "medium"){
-        return $3
-    } else (this.size === "large");{
-        return $4
-    }
+let mainCost = 0;
+
+switch (pizza1.size){
+    case "small":
+        mainCost = 6.99;
+        break;
+    case "medium":
+        mainCost = 8.49;
+        break;
+    case "large":
+        mainCost = 10.29;
+        break;d
 }
 
 // UI logic //
@@ -38,7 +45,7 @@ function OnSubmit(event){
     const Topping = document.querySelector("input[name='toping']:checked").value;
     const Size = document.querySelector("input[name='size']:checked").value;
     
-    
+
 
     
 }
